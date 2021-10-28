@@ -38,8 +38,8 @@ function replace(prevData,nextData){
   prevData.forEach((file,fileIndex) => {
     if(file.data.length != 0){
       file.data.forEach((item,dataIndex)=>{
-        item.lon_bd = nextData[fileIndex]["data"][dataIndex]["����"];
-        item.lat_bd = nextData[fileIndex]["data"][dataIndex]["γ��"];
+        item.lon_bd = nextData[fileIndex]["data"][dataIndex]["����"];   // 经度   （ 读中文出现乱码，才用此拙劣的办法）
+        item.lat_bd = nextData[fileIndex]["data"][dataIndex]["γ��"];   //  纬度
       })
     }
   });
